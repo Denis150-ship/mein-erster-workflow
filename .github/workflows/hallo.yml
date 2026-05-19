@@ -7,13 +7,13 @@ on:
         description: "Wen soll ich begrüßen?"
         required: true
         default: "Welt"
-        
+
 jobs:
   sag-hallo:
     runs-on: ubuntu-latest
     steps:
-      - name: Begrüßung
-        run: echo "Hallo aus GitHub Actions!"
+            - name: Begrüßung
+        run: echo "Hallo, ${{ inputs.name || 'Welt' }}!"
 
       - name: Datum und Uhrzeit
         run: date
